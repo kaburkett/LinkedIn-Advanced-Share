@@ -44,7 +44,7 @@ for (index = 0; index < values.length; ++index)
 
 if (countinput == 5){
 var postcontent = new Array();
-postcontent = {"comment": comment, "content": {"title": title,"description": description,"submitted-url": imagecontent,"submitted-image-url": imageurl},"visibility": {"code": "anyone"} };
+postcontent = {"comment": values[1].value, "content": {"title": values[0].value,"description": values[3].value,"submitted-url": values[2].value,"submitted-image_url": values[4].value},"visibility": {"code": "anyone"} };
 postcontent = JSON.stringify(postcontent);
 
 shareContent(postcontent);
