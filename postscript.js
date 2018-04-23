@@ -56,67 +56,28 @@ else alert("You have to login to linkedin before you can post content.");
 
 
 function onLinkedInLoad() {
-	  IN.Event.on(IN, "auth", organizeinput);
-	}
-
-  // Handle the successful return from the API call
-  function onSuccess(data) {
-    console.log(data);
-    alert("Post Successful!");
-  }
-
-  // Handle an error response from the API call
-  function onError(error) {
-    console.log(error);
-    alert("Oh no, something went wrong. Check the console for an error log.");
-  }
-
-  // Use the API call wrapper to share content on LinkedIn
-  function shareContent(pcontent) {
-
-    IN.API.Raw("/people/~/shares?format=json")
-  .method("POST")
-  .body(pcontent)
-  .result(onSuccess)
-  .error(onError);
+  IN.Event.on(IN, "auth", organizeinput);
 }
 
+// Handle the successful return from the API call
+function onSuccess(data) {
+	console.log(data);
+	alert("Post Successful!");
+}
 
-//function executepost (pcontent)
-//{
-	//$.post("https://api.linkedin.com/v1/people/~/shares?format=json", postcontent, function() {return null;});
-	// Setup an event listener to make an API call once auth is complete
-	
-	
-//}
+// Handle an error response from the API call
+function onError(error) {
+	console.log(error);
+	alert("Oh no, something went wrong. Check the console for an error log.");
+}
+
+// Use the API call wrapper to share content on LinkedIn
+function shareContent(pcontent) {
+	IN.API.Raw("/people/~/shares?format=json")
+	.method("POST")
+	.body(pcontent)
+	.result(onSuccess)
+	.error(onError);
+}
 
 });
-
-/*
-$.ajax({
-    url: "https://api.linkedin.com/v1/people/~/shares?format=json",
-    type: 'post',
-    data: postcontent,
-    headers: {
-    	'Content-Type': 'application/json',
-		'x-li-format': 'json'
-    },
-    dataType: 'json',
-    success: function (data) {
-        console.info(data);
-    }
-});*/
-
-// Convert to URL-encoded string
-//values = jQuery.param(values);
-/*
-if (crflag ==1)
-{
-	$.post("index.php", values, function(response) {processdata(response); return response;});
-}
-else
-{
-	alert("Sorry, looks like we are missing some input");
-}
-//$.post("db_insert.php", $(":input").serializeArray(), function(tabledata){$("#result").html(tabledata);});
-*/
