@@ -4,23 +4,7 @@
   <title>Linkedin Share Link With Image, Choose Picture for Hyperlink Thumbnail, JSON Post Developer, Web Tool, Without Meta Property og: tag Online</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- add jQuery -->
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <!-- add bootstrap -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-  <!-- user typed js for form -->
-  <script src="postscript.js"></script>
-  
-   <!-- initialize LinkedIn JS SDK -->
-  <script type="text/javascript" src="//platform.linkedin.com/in.js">
-  api_key: //YOUR API KEY HERE
-  authorize: true
-  //onLoad: onLinkedInLoad
-  </script>
 </head>
 <body>
 	
@@ -30,7 +14,7 @@
 
 <div class="col-md-4"><!--quick spacer :)--></div>
 	<div class="col-md-5">
-		<form name="post_content" action="" method="post">
+		<form name="post_content" id="post_content" action="" method="post">
 			<label for="comment">Comment: </label>
 			<input type="text" class="form-control" name="comment" placeholder="Comment" required></input><br>
 			<label for="title">Title: </label>
@@ -42,13 +26,26 @@
 			<label for="image-location">Image Location: </label>
 			<input type="text" class="form-control" name="image-url" placeholder="http://example.com/images/example.jpg" required></input><br><br>
 			<input type="button" id="submit_button" value="Submit" class="btn btn-default"></input>
-			
 		</form>
 	</div>
 </div>
 </div>
 
-<div id="VINoutput"></div>
+<!-- add jQuery -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- add bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- user typed js for form -->
+<script src="postscript.js"></script>
+<!-- initialize LinkedIn JS SDK -->
+<script type="text/javascript" src="https://platform.linkedin.com/in.js">
+  api_key: //api key here
+  authorize: true
+  //onLoad: onLinkedInLoad
+</script>
+
 </body>
 </html>
 
