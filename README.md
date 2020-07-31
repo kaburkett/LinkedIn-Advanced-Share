@@ -1,4 +1,4 @@
-<a href="http://datopstech.com/linkedin-share-tool/"><h3>Live Version</h3></a>
+Note: I no longer am hosting a live version because I dont want to publish the API key on github-- for hosting with github pages. If you want to send me some funds to host the site for usage, I would be happy to set it up.
 
 ## Purpose
 
